@@ -1,0 +1,54 @@
+<div class="game-container">
+    <header class="flex flex-row justify-center underline">{{title}}</header>
+  <div class="items-center w-full xl:w-3/4 2xl:w-8/12 flex flex-col">
+      <div class="flex flex-row">
+          <div class="store"><div>{{user2.store}}</div></div>
+          <div class="flex flex-col items-center">
+              {{user2.name}}
+              <div *ngIf="user2" class="holes-container mb-4" [ngClass]="{'opacity-50':user2.id != turn}">
+                  <div class="hole"
+                       *ngFor="let hole of user2.holes; let i = index;"
+                       (click)="moveIt(hole,user2,i,user1)"
+                  >
+                      <div class="flex justify-center items-center border-2 rounded-full w-8">{{hole.piece}}</div>
+                  </div>
+              </div>
+              <div *ngIf="user1" class="holes-container" [ngClass]="{'opacity-50':user1.id != turn}">
+                  <div class="hole"
+                       *ngFor="let hole of user1.holes; let i = index;"
+                       (click)="moveIt(hole,user1,i,user2)"
+                  >
+                      <div class="flex justify-center items-center border-2 rounded-full w-8">{{hole.piece}}</div>
+                  </div>
+              </div>
+              {{user1.name}}
+          </div>
+          <div class="store"><div>{{user1.store}}</div></div>
+      </div>
+      <div *ngIf="isGameOver"
+           class="flex flex-col items-center w-64">
+           <div class="w-1/2 border-t-2 my-4"></div>
+          <ng-container *ngIf="user1.store > user2.store">
+            <div class="flex flex-col">
+               <div>{{user1.name+' '+user1.store+' - '+user2.store}} won.</div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="user2.store > user1.store">
+            <div class="flex flex-col">
+               <div>{{user2.name+' '+user2.store+' - '+user1.store}} won.</div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="user1.store == user2.store">
+            <div class="flex flex-col">
+               <div>Draw. {{user2.store+' - '+user1.store}}</div>
+            </div>
+          </ng-container>
+          <button 
+             (click)="startNewGame()"
+             class="restart-btn mt-4">
+            Again
+          </button>
+      </div>
+  </div>
+  </div>
+  

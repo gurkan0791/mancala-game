@@ -1,0 +1,22 @@
+.game-container {
+    @apply w-full flex flex-col items-center;
+  }
+  
+  .store{
+    @apply flex justify-center items-center;
+    @apply w-8 border-2;
+    > div {
+      @apply flex flex-col items-center justify-center h-4/6 border-2 rounded-2xl w-6;
+    }
+  }
+  .hole{
+    @apply flex justify-center content-center cursor-pointer w-8;
+    @apply border-2;
+  }
+  .holes-container {
+    @apply grid grid-cols-6 gap-4 w-full;
+  }
+
+  .restart-btn {
+    @apply bg-white hover:bg-gray-100 text-gray-800 font-semibold p-2 border border-gray-400 rounded;
+  }
