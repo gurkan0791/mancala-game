@@ -37,6 +37,7 @@ module.exports = function (config) {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
+      }
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
