@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy":"ng deploy --base-href=/mancala-game/ --repo=--repo=https://github.com/gurkan0791/mancala-game.git --no-silent"
+    "deploy":"ng deploy --base-href=/mancala-game/ --no-silent"
   },
   "private": true,
   "dependencies": {
