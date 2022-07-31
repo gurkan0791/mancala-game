@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=/mancala-game/"
+    "deploy":"ng deploy --base-href=/mancala-game/ --repo=mancala-game --no-silent"
   },
   "private": true,
   "dependencies": {
