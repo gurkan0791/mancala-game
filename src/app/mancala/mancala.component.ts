@@ -106,7 +106,7 @@ export class MancalaComponent implements OnInit {
                     //collect all side pieces and put your own store
                     if (user.holes[indx].piece == 1 && opponent.holes[indx].piece > 0) {
                         const capturedPieces = user.holes[indx].piece + opponent.holes[indx].piece;
-                        console.log("karşıyı topla");
+                        console.log("karşıyı topla.");
                         user.store += capturedPieces;
                         user.holes[indx].piece = 0;
                         opponent.holes[indx].piece = 0;
