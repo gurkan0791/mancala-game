@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy":"ng deploy --base-href=/mancala-game/ --no-silent"
+    "deploy":"ng deploy --base-href=/mancala-game/ --name=\"Gurkan Yesilyurt\" --email=gurkan@info.com --no-silent"
   },
   "private": true,
   "dependencies": {
