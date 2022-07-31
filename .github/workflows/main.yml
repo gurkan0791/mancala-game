@@ -20,6 +20,8 @@ jobs:
     - name: Test
       run: | 
        npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+    - name: Build
+      run: npm run build:prod
     - name: Deploy
       if: success()
       uses: peaceiris/actions-gh-pages@v3
